@@ -11,7 +11,7 @@ function NavBar() {
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/instalaciones">Instalaciones</Nav.Link>
-            <Nav.Link href="/logout">Logout</Nav.Link>
+            <Nav.Link href="/login">Login</Nav.Link>
           </Nav>
         </Container>
       </Navbar>      

@@ -46,6 +46,8 @@ function NavBar() {
 export default NavBar;
 ```
 
+[Aquí](./src/components/NavBar.jsx) tienes el componente NavBar.
+
 Modificamos el App.js para que cargue bootstrap [(tal y como viene en la documentación oficial)](https://react-bootstrap.netlify.app/docs/getting-started/introduction) y además contenga el router:
 
 ```javascript
@@ -87,3 +89,8 @@ export default App
 
 ```
 
+Borramos los CSS de App.jsx, main.jsx e index.html porque queremos usar sólo react-bootstrap (por eso el import que ves en el código anterior para cargarlo).
+
+Creamos la página [HomePage](./src/pages/HomePage.jsx).
+
+Creamos la [página LoginPage](./src/pages/LoginPage.jsx) y su [componente Login](./src/components/Login.jsx).
