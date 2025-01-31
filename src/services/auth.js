@@ -1,9 +1,9 @@
-export const getToken = () => localStorage.getItem('token');
+export const getToken = () => localStorage.getItem('tokenIstalacionesDeportivas');
 
 export const setToken = (token) => {
-  localStorage.setItem('token', token);
+  localStorage.setItem('tokenIstalacionesDeportivas', token);
 };
 
 export const clearToken = () => {
-  localStorage.removeItem('token');
+  localStorage.removeItem('tokenIstalacionesDeportivas');
 };

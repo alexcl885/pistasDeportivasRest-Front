@@ -1,7 +1,8 @@
 import { Button, Form } from "react-bootstrap";
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+// import axios from 'axios';
+import  api from "../services/api";
 import { setToken } from "../services/auth";
 
 const Login = () => {
@@ -15,7 +16,8 @@ const Login = () => {
         event.preventDefault();
         setError('');
         try {
-            const response = await axios.post('/api/auth/login', { username, password });
+            const response = await api.post('/auth/login', { username, password });
+            // const response = await axios.post('/auth/login', { username, password });
             setToken(response.data.token);
             navigate('/');
         } catch (err) {
@@ -25,7 +27,7 @@ const Login = () => {
     }
 
     return( 
-        <Form onSubmit={manejaLogin}>
+        <Form>
             <Form.Group className="mb-3">
                 <Form.Label>Username:</Form.Label>
                 <Form.Control
@@ -47,7 +49,7 @@ const Login = () => {
                 />
             </Form.Group>
             <Form.Group className="mb-3">                
-                <Button type="submit">
+                <Button onClick={manejaLogin}>
                     ¡Enviar!
                 </Button>
             </Form.Group>
