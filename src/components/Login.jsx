@@ -17,8 +17,7 @@ const Login = () => {
         setError('');
         try {
             const response = await api.post('/auth/login', { username, password });
-            // const response = await axios.post('/auth/login', { username, password });
-            setToken(response.data.token);
+            setToken(response.data.jwt);
             navigate('/');
         } catch (err) {
             console.log(err);
