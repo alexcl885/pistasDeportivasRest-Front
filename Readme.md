@@ -2,6 +2,14 @@
 
 Front en React para la API REST Spring de gestión de reservas de instalaciones deportivas.
 
+## Diseño de la aplicación
+
+En este enlace puedes [ver cómo hemos diseñado la aplicación](https://youtu.be/LaFSrDjFm1A).
+
+En este enlace puedes ver el [back-end](https://gitlab.iesvirgendelcarmen.com/juangu/adt06-proyectoclasepistasdeportivas).
+
+## Creación del proyecto
+
 Creamos el proyecto y añadimos las dependencias con: 
 
 ```bash

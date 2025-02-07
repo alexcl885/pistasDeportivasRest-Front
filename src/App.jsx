@@ -4,8 +4,10 @@ import RootLayout from "./components/RootLayout";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import InstalacionesPage from "./pages/InstalacionesPage";
+import InstalacionDeletePage from "./pages/InstalcionDeletePage";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import InstalacionFormPage from "./pages/InstalacionFormPage";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,18 @@ const router = createBrowserRouter([
       {
         path: "instalaciones",
         element: <InstalacionesPage />,
+      },
+      {
+        path: "instalacion/add",
+        element: <InstalacionFormPage />,
+      },
+      {
+        path: "instalacion/edit/:id",
+        element: <InstalacionFormPage />,
+      },
+      {
+        path: "instalacion/del/:id",
+        element: <InstalacionDeletePage />,
       },
     ],
   },

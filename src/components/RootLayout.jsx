@@ -19,7 +19,9 @@ const RootLayout = () => {
         <Container>
           <Row>
             <Col className="text-center">
-              &copy; {new Date().getFullYear()} IES Virgen del Carmen. CFGS Desarrollo de Aplicaciones Multiplataforma.
+              &copy; {new Date().getFullYear()} 
+              IES Virgen del Carmen. 
+              CFGS Desarrollo de Aplicaciones Multiplataforma.
             </Col>
           </Row>
         </Container>

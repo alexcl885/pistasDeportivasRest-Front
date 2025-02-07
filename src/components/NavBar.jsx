@@ -14,7 +14,8 @@ function NavBar() {
   // Se ejecuta cada vez que cambia la ruta
   useEffect(() => {
     const token = getToken();
-    setIsLogged(!!token);
+    // devuelve true si es un string y false si es undefined
+    setIsLogged(!!token); 
   }, [location]);
 
   const handleLogout = () => {

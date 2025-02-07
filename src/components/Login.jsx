@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 // import axios from 'axios';
 import  api from "../services/api";
+import { clearToken } from "../services/auth";
 import { setToken } from "../services/auth";
 
 const Login = () => {
@@ -21,6 +22,7 @@ const Login = () => {
             navigate('/');
         } catch (err) {
             console.log(err);
+            clearToken();
             setError('Credenciales no válidas');
         }
     }
