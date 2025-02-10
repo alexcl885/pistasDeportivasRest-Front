@@ -1,13 +1,16 @@
 // App.jsx o donde definas el enrutador
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 import RootLayout from "./components/RootLayout";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import InstalacionesPage from "./pages/InstalacionesPage";
-import InstalacionDeletePage from "./pages/InstalcionDeletePage";
+import InstalacionDeletePage from "./pages/InstalacionDeletePage";
+import InstalacionFormPage from "./pages/InstalacionFormPage";
+import ReservasPage from "./pages/ReservasPage";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import InstalacionFormPage from "./pages/InstalacionFormPage";
+
 
 const router = createBrowserRouter([
   {
@@ -37,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: "instalacion/del/:id",
         element: <InstalacionDeletePage />,
+      },
+      {
+        path: "mis-reservas",
+        element: <ReservasPage />,
       },
     ],
   },
