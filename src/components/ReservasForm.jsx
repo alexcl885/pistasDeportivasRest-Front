@@ -3,7 +3,7 @@ import { Button, Container, Table } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import api from "../services/api";
 
-const InstalacionesList = () => {
+const ReservasForm = () => {
     const [instalaciones, setInstalaciones] = useState([]);
     // const [error, setError] = useState('');
     const navigate = useNavigate();
@@ -29,8 +29,8 @@ const InstalacionesList = () => {
                     <tr>
                         <th>ID</th>  
                         <th>Nombre</th> 
-                        <th>Editar</th>
-                        <th>Borrar</th>
+                        <th>Escoge</th>
+                        {/**<th>Borrar</th>**/}
                     </tr>
                 </thead>
                 <tbody>
@@ -39,15 +39,15 @@ const InstalacionesList = () => {
                             <td>{instalacion.id}</td>
                             <td>{instalacion.nombre}</td>
                             <td>
-                                <Button as={Link} to={`/instalacion/edit/${instalacion.id}`} className="btn-success">
-                                    Editar
+                                <Button as={Link} to={`/mis-reservas/add/horario/instalacion/${instalacion.id}`} className="btn-success">
+                                    elegir
                                 </Button>
                             </td>                            
-                            <td>
+                            {/**<td>
                                 <Button as={Link} to={`/instalacion/del/${instalacion.id}`} className="btn-danger">
                                     Eliminar
                                 </Button>
-                            </td>
+                            </td>**/}
                         </tr>
                     ))}
                 </tbody>
@@ -57,4 +57,4 @@ const InstalacionesList = () => {
     );
 };
 
-export default InstalacionesList;
+export default ReservasForm;
