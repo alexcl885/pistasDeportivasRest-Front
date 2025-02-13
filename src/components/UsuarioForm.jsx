@@ -141,20 +141,20 @@ const UsuarioForm = () => {
             </Form.Group>
             <Form.Group className="mb-3">
                 <Form.Label>Tipo:</Form.Label>
-                <Form.Control
+                {/*<Form.Control
                     type="text"
                     placeholder="Tipo de usuario"
                     aria-label="Tipo del usuario"
                     value={tipo}
                     disabled={estado() === 'del'}
                     onChange={(e) => setTipo(e.target.value)}
-                />
+                />*/}
                 <Form.Select aria-label="Default select example" disabled={estado() === 'del'}
                     onChange={(e) => setTipo(e.target.value)}>
-                    <option>Open this select menu</option>
+                    
                     <option value="ADMIN">ADMIN</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option value="USUARIO">USUARIO</option>
+                    <option value="OPERARIO">OPERARIO</option>
                     disabled={estado() === 'del'}
                     onChange={(e) => setTipo(e.target.value)}
                 </Form.Select>

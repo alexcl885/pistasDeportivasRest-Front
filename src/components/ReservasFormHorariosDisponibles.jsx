@@ -5,7 +5,7 @@ import api from "../services/api";
 
 const ReservasFormHorariosDisponibles = () => {
     const [horarios, setHorarios] = useState([]);
-    // const [error, setError] = useState('');
+     const [error, setError] = useState('no puedes realizar dos reservas al mismo dia');
     const navigate = useNavigate();
 
     let {instalacionId , fecha }=useParams()
@@ -70,7 +70,8 @@ const ReservasFormHorariosDisponibles = () => {
                     ))}
                 </tbody>
             </Table>
-            {/*error && <p style={{ color: 'red' }}>{error}</p>*/}
+            {error && <p style={{ color: 'red', fontSize: "30px"}}>{error}</p>}
+            
         </Container>
     );
 };
