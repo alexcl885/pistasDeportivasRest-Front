@@ -90,8 +90,10 @@ const ReservasUpdateForm = () =>{
                     console.log(response);
                     
                     setFecha(response.data.fecha);
-                    setHorario(response.data.horario.horaInicio)
+                    setHorario(response.data.horario.id)
                     setInstalacion(response.data.horario.instalacion)
+                    setIdInsta(response.data.horario.instalacion.id)
+                    
                     
                     
                     
@@ -149,15 +151,15 @@ const ReservasUpdateForm = () =>{
                     type="text"
                     placeholder="Instalación"
                     aria-label="instalación"
-                    value={instalacion.id}
+                    value={instalacion}
                     disabled={estado()=='del'?true:false}
-                    onChange={(e) => setIdInsta(7)}
+                    onChange={(e) => setIdInsta(e.target.value)}
                     onClick={() => buscarHorariosDisponibles()}
                     
                 >
                     {instalaciones.map((instalacion) => {
                         return (
-                            <option key={instalacion.id}>{instalacion.nombre}</option>
+                            <option key={instalacion.id} value={instalacion.id}>{instalacion.nombre}</option>
                             
                         )
                     })}
@@ -176,7 +178,7 @@ const ReservasUpdateForm = () =>{
                     {horarios.map((horario, index) => {
                         return(
                             <>
-                                <option key={index}>{horario.fechaIncio}</option>
+                                <option  key={horario.id} value={horario.id}>{horario.id}</option>
                             </>
                         )
                     })}
